@@ -11,6 +11,9 @@ interface Props {
   token?: string;
   cartId?: string | null;
   prodUrl: string;
+  hashIndex?: string;
+  hashIndexLegacy?: string;
+  hashPolyfills?: string;
 }
 
 export function ScriptProductionCustom({ 
@@ -18,7 +21,10 @@ export function ScriptProductionCustom({
   storeHash, 
   channelId, 
   token,
-  prodUrl
+  prodUrl,
+  hashIndex,
+  hashIndexLegacy,
+  hashPolyfills,
 }: Props) {
   useB2BAuth(token);
   useB2BCart(cartId);
@@ -43,17 +49,17 @@ export function ScriptProductionCustom({
       <Script
         type="module"
         crossOrigin=""
-        src={`${prodUrl}/index.js`}
+        src={`${prodUrl}/index${hashIndex ? `.${hashIndex}` : ''}.js`}
       ></Script>
       <Script
         noModule
         crossOrigin=""
-        src={`${prodUrl}/polyfills-legacy.js`}
+        src={`${prodUrl}/polyfills-legacy${hashPolyfills ? `.${hashPolyfills}` : ''}.js`}
       ></Script>
       <Script
         noModule
         crossOrigin=""
-        src={`${prodUrl}/index-legacy.js`}
+        src={`${prodUrl}/index-legacy${hashIndexLegacy ? `.${hashIndexLegacy}` : ''}.js`}
       ></Script>
     </>
   );
