@@ -1,1 +1,0 @@
-{"version":3,"file":"index-svd1z9Cs.js","sources":["../../src/pages/CompanyOrderList/index.tsx"],"sourcesContent":["import Order from '../order/Order';\n\nexport default function CompanyOrderList() {\n  return <Order isCompanyOrder />;\n}\n"],"names":["CompanyOrderList","jsx","Order"],"mappings":"iwBAEA,SAAwBA,GAAmB,CACzC,OAAOC,EAAAA,IAACC,EAAA,CAAM,eAAc,EAAA,CAAC,CAC/B"}

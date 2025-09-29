@@ -1,0 +1,1 @@
+{"version":3,"file":"index-legacy-Fs-pYKLe.js","sources":["../../src/pages/CompanyOrderList/index.tsx"],"sourcesContent":["import Order from '../order/Order';\n\nexport default function CompanyOrderList() {\n  return <Order isCompanyOrder />;\n}\n"],"names":["jsx","Order","isCompanyOrder"],"mappings":"0+BAEA,WACE,OAAOA,EAAAA,IAACC,EAAA,CAAMC,gBAAc,GAC9B"}
