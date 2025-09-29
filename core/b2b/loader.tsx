@@ -31,6 +31,18 @@ export async function B2BLoader() {
 
   const session = await auth();
 
+  if (LOCAL_BUYER_PORTAL_HOST) {
+    return (
+      <ScriptDev
+        cartId={session?.user?.cartId ?? undefined}
+        channelId={BIGCOMMERCE_CHANNEL_ID}
+        hostname={LOCAL_BUYER_PORTAL_HOST}
+        storeHash={BIGCOMMERCE_STORE_HASH}
+        token={session?.b2bToken}
+      />
+    );
+  }
+
   if (PROD_BUYER_PORTAL_URL) {
     return (
       <ScriptProductionCustom
@@ -42,18 +54,6 @@ export async function B2BLoader() {
         hashIndex={PROD_BUYER_PORTAL_HASH_INDEX}
         hashIndexLegacy={PROD_BUYER_PORTAL_HASH_INDEX_LEGACY}
         hashPolyfills={PROD_BUYER_PORTAL_HASH_POLYFILLS}
-      />
-    );
-  }
-
-  if (LOCAL_BUYER_PORTAL_HOST) {
-    return (
-      <ScriptDev
-        cartId={session?.user?.cartId ?? undefined}
-        channelId={BIGCOMMERCE_CHANNEL_ID}
-        hostname={LOCAL_BUYER_PORTAL_HOST}
-        storeHash={BIGCOMMERCE_STORE_HASH}
-        token={session?.b2bToken}
       />
     );
   }
