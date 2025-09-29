@@ -1,0 +1,2 @@
+import{a7 as i,c0 as n,w as l}from"./react-setup-Bynf4djQ.js";const c=(r,e=!1)=>{const{global:{loginLandingLocation:t,recordOpenHash:o,setOpenPageFn:a}}=i.getState();if(t===n.HOME&&!o)return l==="catalyst"?!1:window.location.href.includes("login.php")?(e&&window.sessionStorage.clear(),window.location.href="/",!1):(r("/"),a==null||a({isOpen:!1,openUrl:""}),e&&window.sessionStorage.clear(),window.location.reload(),!1);if(t===n.HOME&&o){if(l==="catalyst")return!1;const s=o.split("#")[1];return r(s),!1}return!0};export{c as l};
+//# sourceMappingURL=b3Login-DqPiw-tJ.js.map

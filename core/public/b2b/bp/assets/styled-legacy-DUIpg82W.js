@@ -1,0 +1,2 @@
+System.register(["./mui-legacy-Co1sKVsS.js"],function(e,t){"use strict";var i;return{setters:[e=>{i=e.s}],execute:function(){e("a",i("div")(({paddings:e})=>({padding:e}))),e("L",i("div")({display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",width:"100%",height:"100%"})),e("B",i("div")({margin:"16px 0 20px 16px"}))}}});
+//# sourceMappingURL=styled-legacy-DUIpg82W.js.map

@@ -1,0 +1,2 @@
+import{r as t}from"./intl-D34a3Rgg.js";function s(){const[n,i]=t.useState({width:window.innerWidth,height:window.innerHeight}),e=t.useCallback(()=>{i({width:window.innerWidth,height:window.innerHeight})},[]);return t.useEffect(()=>(window.addEventListener("resize",e),()=>window.removeEventListener("resize",e)),[e]),n}const a=()=>{const{width:n}=s(),[i,e]=t.useState(!1);return t.useEffect(()=>{Number(n)>=1536?e(!0):e(!1)},[n]),i};function o(){return[t.useRef(null)]}export{o as a,a as u};
+//# sourceMappingURL=useTableRef-CsMdwZmB.js.map
