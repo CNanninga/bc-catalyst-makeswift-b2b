@@ -5,6 +5,13 @@ import Script from 'next/script';
 import { useB2BAuth } from './use-b2b-auth';
 import { useB2BCart } from './use-b2b-cart';
 
+/**
+ * Use these vars if using build hashes in B2B Buyer Portal files.
+ */
+const hashIndex = null;
+const hashIndexLegacy = null;
+const hashPolyfills = null;
+
 interface Props {
   storeHash: string;
   channelId: string;
@@ -22,9 +29,6 @@ export function ScriptProductionCustom({
   channelId, 
   token,
   prodUrl,
-  hashIndex,
-  hashIndexLegacy,
-  hashPolyfills,
 }: Props) {
   useB2BAuth(token);
   useB2BCart(cartId);
