@@ -123,10 +123,10 @@ export default async function RootLayout({ params, children }: Props) {
       <html className={clsx(fonts.map((f) => f.variable))} lang={locale}>
         <head>
           <SiteTheme />
-          <ScriptManagerScripts
+          {/*<ScriptManagerScripts
             scripts={data.site.content.headerScripts}
             strategy="afterInteractive"
-          />
+          />*/}
         </head>
         <body className="flex min-h-screen flex-col">
           <NextIntlClientProvider>
@@ -144,7 +144,7 @@ export default async function RootLayout({ params, children }: Props) {
           </NextIntlClientProvider>
           <VercelComponents />
           <ContainerQueryPolyfill />
-          <ScriptManagerScripts scripts={data.site.content.footerScripts} strategy="lazyOnload" />
+          {/*<ScriptManagerScripts scripts={data.site.content.footerScripts} strategy="lazyOnload" />*/}
         </body>
       </html>
     </MakeswiftProvider>
